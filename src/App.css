@@ -22,3 +22,19 @@ body {
 .float-animation {
   animation: floatUpDown 4s ease-in-out infinite;
 }
+
+@keyframes flashBorder {
+  0% {
+    box-shadow: 0 0 5px #592DB5, 0 0 10px #592DB5, 0 0 20px #592DB5;
+  }
+  50% {
+    box-shadow: 0 0 20px #592DB5, 0 0 30px #592DB5, 0 0 40px #592DB5;
+  }
+  100% {
+    box-shadow: 0 0 5px #592DB5, 0 0 10px #592DB5, 0 0 20px #592DB5;
+  }
+}
+
+.flash-button {
+  animation: flashBorder 2s infinite;
+}
