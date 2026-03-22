@@ -25,8 +25,8 @@ const BrandCarousel = () => {
                 key={index}
                 className="flex flex-col items-center justify-center min-w-32 cursor-pointer hover:scale-110 transform transition duration-500"
               >
-                <img src={brand.logo} alt={brand.name} className="w-20 h-20 object-contain mb-2" />
-                <span className="text-gray-700 font-semibold">{brand.name}</span>
+                <img src={brand.logo} alt={brand.name} className="w-20 h-10 object-contain mb-2" />
+                <span className="text-white font-semibold">{brand.name}</span>
               </div>
             ))}
           </motion.div>

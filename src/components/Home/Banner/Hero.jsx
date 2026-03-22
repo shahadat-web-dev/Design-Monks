@@ -15,14 +15,14 @@ const Hero = () => {
 
         {/* Center Text */}
         <div className='md:pr-10 '>
-          <div className='lg:pl-78 md:pl-10 pl-30'>
+          <div className='lg:pl-78 md:pl-10 pl-37'>
             <img className='w-30' src="/google.png" alt="" />
             <h4 className='text-white text-sm'>4.9 ⭐⭐⭐⭐⭐</h4>
           </div>
-          <h1 className='text-white pt-4 lg:text-xl font-semibold lg:pl-60 pl-15'>Leading UI/UX Design Agency</h1>
-          <h1 className='text-white pt-5 font-bold text-3xl lg:text-[60px] md:text-2xl'>
+          <h1 className='text-white pt-4 lg:text-xl text-xl font-semibold lg:pl-60 pl-18'>Leading UI/UX Design Agency</h1>
+          <h1 className='text-white pt-5 md:pl-0 pl-7 font-bold text-3xl lg:text-[60px] md:text-2xl'>
             We <span className='italic playfair'>Design</span> Products That <br />
-            <span className="flex items-center justify-center gap-3">
+            <span className="flex items-center justify-center md:gap-3">
               Drive
               <img className="w-24 h-12 lg:w-32 lg:h-16" src="/figma.png" alt="" />
               <span className='italic playfair'>Results</span>
@@ -30,14 +30,16 @@ const Hero = () => {
           </h1>
 
 
-          <h1 className='text-white border mt-5 mx-auto md:w-105 rounded-full py-2 px-0 border-green-700 text-center'>🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈 Designig across 8+ countries 🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈</h1>
+          <h1 className='text-white border mt-5 md:mx-auto md:w-105 w-100 rounded-full py-2 px-0 border-green-700 text-center'>🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈 Designig across 8+ countries 🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈</h1>
           
           {/* Button */}
           <div className='flex justify-center pt-10'>
-             <button className='text-white md:py-3 md:px-10 bg-[#592DB5] font-bold flash-button cursor-pointer rounded-sm'>Book a Call</button>
+             <button className='text-white md:py-3 py-4 md:px-10 px-8 bg-[#592DB5] font-bold flash-button cursor-pointer rounded-sm'>Book a Call</button>
           </div>
 
-          <BrandCarousel></BrandCarousel>
+          <div className='md:w-150 w-90 pt-20'>
+            <BrandCarousel></BrandCarousel>
+          </div>
 
         </div>
 
