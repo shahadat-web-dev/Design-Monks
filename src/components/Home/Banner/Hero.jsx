@@ -1,9 +1,12 @@
 import React from 'react';
 import BrandCarousel from '../BrandCarousel/BrandCarousel';
+import IndustrySection from '../Industry/IndustrySection';
 
 const Hero = () => {
   return (
-    <div className='bg-linear-to-t to-50% from-green-800 to-black min-h-screen'>
+    <div>
+
+      <div className='bg-linear-to-t to-50% from-green-800 to-black min-h-screen'>
       <div className='text-white flex justify-center items-center text-3xl  pt-6 font-medium'>designm<img className='w-4 h-4 rounded-full mt-2' src="/center.png" alt="" />nks</div>
 
       <div className='flex justify-between relative pt-18'>
@@ -49,8 +52,13 @@ const Hero = () => {
         </div>
 
       </div>
-
       
+    </div>
+
+      {/* Industry Section */}
+      <div>
+        <IndustrySection></IndustrySection>
+      </div>
 
     </div>
   );
