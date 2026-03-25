@@ -5,42 +5,74 @@ const cards = [
   {
     title: "Travel",
     desc: "Easy Booking for Dream Trips",
-    descreption:"Triply is a hassle-free &  effective tour solution for travelers.It's an all-inclusive booking and planning webdite that helps people make their dream trips easier.",
+    descreption: "Triply is a hassle-free &  effective tour solution for travelers.It's an all-inclusive booking and planning webdite that helps people make their dream trips easier.",
     img: "https://i.ibb.co.com/V044rcWf/1.png",
     bg: "bg-[#C6CFFF]",
-    bg2:"https://i.ibb.co.com/8g4bDLrG/Screenshot-2-Photoroom.png",
+    bg2: "https://i.ibb.co.com/8g4bDLrG/Screenshot-2-Photoroom.png",
+    duration: "8 Weeks",
+    scope: "Mobile App",
+    author: "Shubho Al-Farooque",
+    role: "Zantrik CEO",
+    profile: "https://i.pravatar.cc/100?img=1",
+    profileBg: "bg-[#9AABFF]",
   },
   {
-    title: "Fitness",
-    desc: "Modern UI for fitness platforms.",
+    title: "Restaurant",
+    desc: "Transform Your Dining",
+    descreption: "At Plate, we bring you a handpicked selection of premium restaurants that offter not just meals, but memorable dining eexperiences, you'|| cherish.",
     img: "https://i.ibb.co.com/VWvk6Rs8/2.png",
     bg: "bg-[#FFB8B0]",
-    bg2:"https://i.ibb.co.com/HDRmdM1p/red.png",
+    bg2: "https://i.ibb.co.com/HDRmdM1p/red.png",
+    duration: "8 Weeks",
+    scope: "Mobile App",
+    author: "Shubho Al-Farooque",
+    role: "Zantrik CEO",
+    profile: "https://i.pravatar.cc/100?img=1",
+    profileBg: "bg-[#FE8F83]",
 
   },
   {
-    title: "Logistics",
-    descreption:"",
-    desc: "Dashboard design for logistics systems.",
+    title: "SaaS",
+    desc: "Reducing Carbon Footprints",
+    descreption: "Yenex is a smart and sustainable energy platform. It empowers users with distributed energy solutions to reduce carbon footprints effortlessly.",
     img: "https://i.ibb.co.com/2Th3RDf/3.png",
     bg: "bg-[#FBE8A4]",
-    bg2:"https://i.ibb.co.com/ZRP1wCsp/yellow.png",
+    bg2: "https://i.ibb.co.com/ZRP1wCsp/yellow.png",
+    duration: "8 Weeks",
+    scope: "Mobile App",
+    author: "Shubho Al-Farooque",
+    role: "Zantrik CEO",
+    profile: "https://i.pravatar.cc/100?img=1",
+    profileBg: "bg-[#F7BB48]",
 
   },
   {
-    title: "IT Solutions",
-    desc: "Scalable SaaS UI/UX systems.",
+    title: "Healthcare",
+    desc: "Revolutionize Fitness Goals",
+    descreption: "Fitmate transforms fitness in Australia with flexible gym access, personalized schedules, and Al-driven insights to solve common workout limitations for users.",
     img: "https://i.ibb.co.com/BHJPmFjw/4.png",
     bg: "bg-[#ABF5FF]",
-    bg2:"https://i.ibb.co.com/v4Zc74fP/akasi.png",
-
+    bg2: "https://i.ibb.co.com/v4Zc74fP/akasi.png",
+    duration: "8 Weeks",
+    scope: "Mobile App",
+    author: "Shubho Al-Farooque",
+    role: "Zantrik CEO",
+    profile: "https://i.pravatar.cc/100?img=1",
+    profileBg: "bg-[#76EBFB]",
   },
   {
-    title: "IT Solutions",
-    desc: "Scalable SaaS UI/UX systems.",
+    title: "Vehicle Maintenance Platform",
+    desc: "Simplifying Vehicle Care",
+    descreption: "Zantrik is an innovative vehicle maintenace app. We revamped it with a fresh design, gamificaiton, and intuitive ffeatures o boost user engagement.",
     img: "https://i.ibb.co.com/ymVwrTcG/5.png",
     bg: "bg-[#C9FFF7]",
-    bg2:"https://i.ibb.co.com/gMHrZ6by/Gemini-Generated-Image-clxlscclxlscclxl-Photoroom.png",
+    bg2: "https://i.ibb.co.com/gMHrZ6by/Gemini-Generated-Image-clxlscclxlscclxl-Photoroom.png",
+    duration: "8 Weeks",
+    scope: "Mobile App",
+    author: "Shubho Al-Farooque",
+    role: "Zantrik CEO",
+    profile: "https://i.pravatar.cc/100?img=1",
+    profileBg: "bg-[#57E6D8]",
 
   },
 ];
@@ -63,9 +95,54 @@ function Card({ card, index }) {
         {/* Text */}
         <div>
           <h3 className="text-2xl text-black playfair italic font-bold mb-4">{card.title}</h3>
-          <p className="text-black md:text-3xl font-semibold">{card.desc}</p>
+          <p className="text-black md:text-4xl font-bold red-hat ">{card.desc}</p>
           <p className="text-[#52586E] md:text-xl pt-6">{card.descreption}</p>
+
+          {/* Info Section */}
+          <div className="mt-8 space-y-6">
+
+            {/* Top Info */}
+            <div className="flex gap-16">
+              <div>
+                <p className="text-[#4b5563] text-sm">Project Duration</p>
+                <h3 className="text-black text-2xl font-bold">
+                  {card.duration}
+                </h3>
+              </div>
+
+              <div>
+                <p className="text-[#4b5563] text-sm">Work Scope</p>
+                <h3 className="text-black text-2xl font-bold">
+                  {card.scope}
+                </h3>
+              </div>
+            </div>
+
+            {/* Profile Card */}
+            <div className={`flex items-center justify-between ${card.profileBg}  rounded-xl px-4 py-3 max-w-md`}>
+              <div className="flex items-center gap-3">
+                <img
+                  src={card.profile}
+                  alt=""
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 className="text-black font-semibold">
+                    {card.author}
+                  </h4>
+                  <p className="text-[#1f2937] text-sm">
+                    {card.role}
+                  </p>
+                </div>
+              </div>
+
+              <span className="text-[#525252] text-2xl">→</span>
+            </div>
+
+          </div>
         </div>
+
+
 
 
         {/* Image */}
@@ -75,7 +152,7 @@ function Card({ card, index }) {
           <img
             src={card.bg2}
             alt=""
-            className="w-full  max-w-105 h-55 md:h-75 object-contain rounded-[20px]"
+            className="w-full  max-w-105 h-55 md:h-95 object-contain md:rounded-[60px]"
           />
 
           {/* Main image */}
@@ -84,7 +161,7 @@ function Card({ card, index }) {
             alt={card.title}
             className="
       absolute 
-      bottom-5 md:bottom-12.5
+      bottom-5 md:bottom-20.5
       right- md:right-10
       w-40 md:w-[320px]
       h-50 md:h-50

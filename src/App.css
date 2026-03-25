@@ -1,18 +1,24 @@
 body {
-   font-family: "Outfit", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-.playfair{
-   font-family: "Playfair Display", serif;
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.red-hat {
+  font-family: "Red Hat Display", sans-serif;
 }
 
 @keyframes floatUpDown {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-40px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -26,9 +32,11 @@ body {
   0% {
     box-shadow: 0 0 5px #592DB5, 0 0 10px #592DB5, 0 0 20px #592DB5;
   }
+
   50% {
     box-shadow: 0 0 20px #592DB5, 0 0 30px #592DB5, 0 0 40px #592DB5;
   }
+
   100% {
     box-shadow: 0 0 5px #592DB5, 0 0 10px #592DB5, 0 0 20px #592DB5;
   }
