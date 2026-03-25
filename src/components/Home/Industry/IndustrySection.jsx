@@ -3,8 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const cards = [
   {
-    title: "EdTech",
-    desc: "Proven success designing education platforms.",
+    title: "Travel",
+    desc: "Easy Booking for Dream Trips",
+    descreption:"Triply is a hassle-free &  effective tour solution for travelers.It's an all-inclusive booking and planning webdite that helps people make their dream trips easier.",
     img: "https://i.ibb.co.com/V044rcWf/1.png",
     bg: "bg-[#C6CFFF]",
     bg2:"https://i.ibb.co.com/8g4bDLrG/Screenshot-2-Photoroom.png",
@@ -19,6 +20,7 @@ const cards = [
   },
   {
     title: "Logistics",
+    descreption:"",
     desc: "Dashboard design for logistics systems.",
     img: "https://i.ibb.co.com/2Th3RDf/3.png",
     bg: "bg-[#FBE8A4]",
@@ -48,20 +50,21 @@ function Card({ card, index }) {
   const scale = useTransform(
     scrollYProgress,
     [index * 0.15, 1],
-    [1, 0.85]
+    [1, 0.8]
   );
 
   return (
     <motion.div
-      style={{ scale, zIndex: 10 + index }}
+      style={{ scale, zIndex: 100 + index }}
       className="sticky top-28 mb-24"
     >
       <div className={`grid md:grid-cols-2 gap-10 ${card.bg} border p-10 rounded-2xl hover:scale-[1.02] transition duration-500`}>
 
         {/* Text */}
         <div>
-          <h3 className="text-3xl text-black font-bold mb-4">{card.title}</h3>
-          <p className="text-black">{card.desc}</p>
+          <h3 className="text-2xl text-black playfair italic font-bold mb-4">{card.title}</h3>
+          <p className="text-black md:text-3xl font-semibold">{card.desc}</p>
+          <p className="text-[#52586E] md:text-xl pt-6">{card.descreption}</p>
         </div>
 
 
@@ -82,7 +85,7 @@ function Card({ card, index }) {
             className="
       absolute 
       bottom-5 md:bottom-12.5
-      right-4 md:right-10
+      right- md:right-10
       w-40 md:w-[320px]
       h-50 md:h-50
       object-cover
@@ -99,12 +102,12 @@ function Card({ card, index }) {
 
 export default function IndustrySection() {
   return (
-    <section className=" text-white bg-[#FAFAFA] py-32">
+    <section className=" text-white z-10 bg-[#FAFAFA] py-32">
       <div className="max-w-7xl mx-auto ">
         <div className="pl-10">
           <h4 className="text-green-600 border border-green-400 pl-2 rounded-full w-30 text-x">Industry Wins</h4>
-          <h1 className="text-black text-5xl font-medium pt-3">Proven Success in</h1>
-          <h1 className="text-black text-5xl font-semibold pb-12 pt-2 italic playfair">Every Industry</h1>
+          <h1 className="text-black md:text-5xl text-4xl font-medium md:pt-3 pt-4">Proven Success in</h1>
+          <h1 className="text-black md:text-5xl text-4xl font-semibold pb-12 pt-2 italic playfair">Every Industry</h1>
         </div>
 
         {cards.map((card, index) => (
