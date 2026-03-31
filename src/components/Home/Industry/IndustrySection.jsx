@@ -191,6 +191,17 @@ export default function IndustrySection() {
           <Card key={index} card={card} index={index} />
         ))}
       </div>
+
+      {/* See All Projects Button*/}
+      <div className="flex justify-center md:-mt-20 -mt-30">
+        <a
+          href="/projects"
+          className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-gray-300  bg-[#592DB5] text-white font-bold"
+        >
+          See All Projects
+          <span className="text-lg">→</span>
+        </a>
+      </div>
     </section>
   );
 }

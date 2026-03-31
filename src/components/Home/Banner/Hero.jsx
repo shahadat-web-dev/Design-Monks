@@ -2,6 +2,7 @@ import React from 'react';
 import BrandCarousel from '../BrandCarousel/BrandCarousel';
 import IndustrySection from '../Industry/IndustrySection';
 import Navbar from '../Navbar/Navbar';
+import ClientStories from '../ClientStories/ClientStories';
 
 const Hero = () => {
   return (
@@ -10,21 +11,21 @@ const Hero = () => {
       <div className='bg-linear-to-t to-50% from-green-800 to-black min-h-screen'>
         <div className='text-white flex justify-center items-center text-3xl  pt-6 font-medium'>designm<img className='w-4 h-4 rounded-full mt-2' src="/center.png" alt="" />nks</div>
 
-        <div className='flex justify-between relative pt-18'>
+        <div className='flex justify-between relative lg:pt-18'>
 
           {/* left image */}
           <div>
-            <img className='float-animation hidden md:block' src="/public/left.png" alt="" />
+            <img className='float-animation hidden lg:block' src="/public/left.png" alt="" />
           </div>
 
           {/* Center Text */}
-          <div className='md:pr-10 '>
-            <div className='lg:pl-78 md:pl-10 pl-37'>
+          <div className=' text-center'>
+            <div className='flex flex-col justify-center items-center'>
               <img className='w-30' src="/google.png" alt="" />
               <h4 className='text-white text-sm'>4.9 ⭐⭐⭐⭐⭐</h4>
             </div>
-            <h1 className='text-white pt-4 lg:text-xl text-xl font-semibold lg:pl-60 pl-18'>Leading UI/UX Design Agency</h1>
-            <h1 className='text-white pt-5 md:pl-0 pl-7 font-bold text-3xl lg:text-[60px] md:text-2xl'>
+            <h1 className='text-white pt-4 lg:text-xl text-xl font-semibold '>Leading UI/UX Design Agency</h1>
+            <h1 className='text-white pt-5  font-bold text-3xl lg:text-[60px] md:text-2xl'>
               We <span className='italic playfair'>Design</span> Products That <br />
               <span className="flex items-center justify-center md:gap-3">
                 Drive
@@ -51,7 +52,7 @@ const Hero = () => {
 
           {/* Right image */}
           <div className=''>
-            <img className='float-animation hidden md:block' src="/right.png" alt="" />
+            <img className='float-animation hidden lg:block' src="/right.png" alt="" />
           </div>
 
         </div>
@@ -66,6 +67,11 @@ const Hero = () => {
       <div>
         <IndustrySection></IndustrySection>
       </div>
+
+      
+      {/*  */}
+      <ClientStories></ClientStories>
+      
 
       
 
