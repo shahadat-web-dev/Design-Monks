@@ -9,32 +9,32 @@ const services = [
     title: "UI/UX Design",
     desc: "UI/UX Design, App Design, Website Design, Dashboard Design, Wireframing & Prototyping, Interaction Design, and Product Design.",
     images: [
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a",
-      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e",
+      "https://i.ibb.co.com/gMwLJ2zW/Screenshot-1.png",
+      "https://i.ibb.co.com/5hzfmj8J/Screenshot-2.png",
     ],
   },
   {
     title: "Web Development",
     desc: "Frontend Development, Backend Development, Full Stack Solutions, Mobile App Development, Custom Web Applications, API Integration.",
     images: [
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+      "https://i.ibb.co.com/6h5Vz2m/Screenshot-3.png",
+      "https://i.ibb.co.com/Q73mcb83/Screenshot-4.png",
     ],
   },
   {
     title: "Logo & Branding",
     desc: "Logo Design, Full Branding, Business Branding, 3D Logo, Visual Identity, Brand Strategy, Social Media Branding.",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-      "https://images.unsplash.com/photo-1503602642458-232111445657",
+      "https://i.ibb.co.com/MDD7QM2T/Screenshot-5.png",
+      "https://i.ibb.co.com/39DQGkJz/Screenshot-6.png",
     ],
   },
   {
     title: "Webflow & Framer",
     desc: "Custom Webflow Websites, Webflow Plugin, Framer Prototypes, Framer Material, Framer App, CMS Integration, Rapid Development.",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-      "https://images.unsplash.com/photo-1503602642458-232111445657",
+      "https://i.ibb.co.com/dsQF7p1w/Screenshot-7.png",
+      "https://i.ibb.co.com/358rSVff/Screenshot-8.png",
     ],
   },
 ];
@@ -69,7 +69,7 @@ export default function WhatWeDoAdvanced() {
 
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
         {/* LEFT STICKY CONTENT */}
-        <div className="sticky pt-30 top-24 h-fit">
+        <div className="sticky md:pt-30 top-24 h-fit">
           {services.map((item, index) => (
             <div
               key={index}
@@ -91,24 +91,36 @@ export default function WhatWeDoAdvanced() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="h-[80vh] flex items-center justify-center"
+              className="h-[50vh] flex items-center justify-center"
             >
               <div className="flex items-start gap-8">
                 <img
                   src={item.images[0]}
                   alt=""
-                  className="w-64 md:w-80 h-120 rounded-xl shadow-xl -translate-y-6"
+                  className="w-64 md:w-90 md:h-120 rounded-xl shadow-xl -translate-y-6"
                 />
                 <img
                   src={item.images[1]}
                   alt=""
-                  className="w-64 md:w-80 h-120 rounded-xl shadow-xl translate-y-6"
+                  className="w-64 md:w-90 md:h-120 rounded-xl shadow-xl translate-y-6"
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Book a Call Button*/}
+      <div className="flex justify-center md:pt-20">
+        <a
+          href="/Book"
+          className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-gray-300  bg-[#592DB5] text-white font-bold"
+        >
+          Book a Call
+          <span className="text-lg">→</span>
+        </a>
+      </div>
+
     </section>
   );
 }
