@@ -29,9 +29,8 @@ export default function WhyUsSection() {
           Why Us? Because Your <span className="italic playfair">Growth Is Our Mission</span>
         </h2>
 
-        <p className="text-gray-400 mt-4 mb-20 max-w-2xl mx-auto">
-          From wireframes to launch, we blend AI tools with strategy to deliver
-          faster, sharper, and data-led design results.
+        <p className="text-[#666666] text-center text-lg mt-7 mb-20 max-w-2xl mx-auto">
+          See the difference thoughtfull design makes. Our works highlight the dedication <br /> we bring to every client partnership.
         </p>
 
         {/* 🎬 Video */}
