@@ -12,7 +12,7 @@ const videos = [
 
 export default function ClientVideoCarousel() {
 const [playingIndex, setPlayingIndex] = useState(null);
-
+const [mutedIndex, setMutedIndex] = useState(null);
   return (
     <section className="py-20 bg-[#FAFAFA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,12 +32,11 @@ const [playingIndex, setPlayingIndex] = useState(null);
           {videos.map((item, index) => (
   <div
     key={index}
-    className="relative min-w-70 md:min-w-85 aspect-[3/5] rounded-2xl overflow-hidden shadow-lg group"
+    className="relative min-w-70 md:min-w-85 aspect-3/5 rounded-2xl overflow-hidden shadow-lg group"
   >
     <video
       src={item.video}
       className="w-full h-full object-cover"
-      muted
       loop
       playsInline
       onMouseEnter={(e) => {
@@ -49,6 +48,17 @@ const [playingIndex, setPlayingIndex] = useState(null);
         setPlayingIndex(null);
       }}
     />
+
+    {/* Sound Button */}
+<button
+  onClick={(e) => {
+    e.stopPropagation();
+    setMutedIndex(mutedIndex === index ? null : index);
+  }}
+  className="absolute bottom-4 right-4 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur"
+>
+  {mutedIndex === index ? "🔇" : "🔊"}
+</button>
 
     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition pointer-events-none" />
 

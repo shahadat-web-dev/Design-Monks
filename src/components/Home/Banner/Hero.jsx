@@ -3,6 +3,7 @@ import BrandCarousel from '../BrandCarousel/BrandCarousel';
 import IndustrySection from '../Industry/IndustrySection';
 import Navbar from '../Navbar/Navbar';
 import ClientStories from '../ClientStories/ClientStories';
+import AIDesignSection from '../AIDesignSection/AIDesignSection';
 
 const Hero = () => {
   return (
@@ -68,12 +69,16 @@ const Hero = () => {
         <IndustrySection></IndustrySection>
       </div>
 
-      
-      {/*  */}
-      <ClientStories></ClientStories>
-      
 
-      
+      {/* ClientStories section */}
+      <ClientStories></ClientStories>
+
+      {/*  */}
+      <div className=''>
+        <AIDesignSection></AIDesignSection>
+      </div>
+
+
 
     </div>
   );
