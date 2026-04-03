@@ -91,9 +91,9 @@ export default function WhatWeDoAdvanced() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="h-[50vh] flex items-center justify-center"
+              className="md:h-[50vh] flex items-center justify-center"
             >
-              <div className="flex items-start gap-8">
+              <div className="flex flex-col md:flex-row items-start gap-8">
                 <img
                   src={item.images[0]}
                   alt=""
@@ -102,7 +102,7 @@ export default function WhatWeDoAdvanced() {
                 <img
                   src={item.images[1]}
                   alt=""
-                  className="w-64 md:w-90 md:h-120 rounded-xl shadow-xl translate-y-6"
+                  className="w-64 md:w-90 md:h-120 hidden md:block rounded-xl shadow-xl translate-y-6"
                 />
               </div>
             </div>
