@@ -58,7 +58,7 @@ export default function WhatWeDoAdvanced() {
   });
 
   return (
-    <section ref={containerRef} className="w-full bg-black text-white py-28">
+    <section ref={containerRef} className="w-full bg-black rounded-4xl text-white py-28">
       {/* HEADER */}
       <div className="max-w-7xl pb-10 mx-auto px-6">
         <span className="border border-green-500 text-green-400 px-4 py-1 rounded-full text-sm">What We Do</span>

@@ -31,7 +31,7 @@ const features = [
 export default function WhyChooseUsSection() {
   return (
     <section className="py-24 bg-[#FAFAFA]">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Title */}
         <div className="max-w-2xl mb-16">
@@ -49,7 +49,7 @@ export default function WhyChooseUsSection() {
             {features.slice(0, 2).map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl p-6 border-2 border-gray-200 bg-gradient-to-b from-pink-100  via-white to-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                className="rounded-2xl p-6 border-2 border-gray-200 bg-gradient-to-b from-pink-100  via-white hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
                 <img
                   src={item.img}
@@ -73,7 +73,7 @@ export default function WhyChooseUsSection() {
             {features.slice(2, 5).map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl p-6 border-2 border-gray-200 bg-gradient-to-b from-pink-100 via-white to-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                className="rounded-2xl p-6 border-2 border-gray-200 bg-gradient-to-b from-pink-100 via-white hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
                 <img
                   src={item.img}
