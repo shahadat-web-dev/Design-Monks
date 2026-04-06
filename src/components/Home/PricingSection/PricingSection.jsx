@@ -1,6 +1,7 @@
 import React from "react";
 import BonusSection from "../BonusSection/BonusSection";
 import WhyChooseSection from "../WhyChooseSection/WhyChooseSection";
+import OpeningsSection from "../OpeningsSection/OpeningsSection";
 
 const plans = [
   {
@@ -120,6 +121,7 @@ export default function PricingSection() {
       </div>
       <BonusSection></BonusSection>
       <WhyChooseSection></WhyChooseSection>
+      <OpeningsSection></OpeningsSection>
     </section>
   );
 }
