@@ -6,6 +6,8 @@ import WhyChooseUsSection from './WhyChooseUsSection/WhyChooseUsSection';
 import ShowcaseSection from './ShowcaseSection/ShowcaseSection';
 import PricingSection from './PricingSection/PricingSection';
 import ReviewSection from './ReviewSection/ReviewSection';
+import QuestionsAnswered from './QuestionsAnswered/QuestionsAnswered';
+import FooterSection from './FooterSection/FooterSection';
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
       <ShowcaseSection></ShowcaseSection>
       <PricingSection></PricingSection>
       <ReviewSection></ReviewSection>
+      <QuestionsAnswered></QuestionsAnswered>
+      <FooterSection></FooterSection>
     </div>
   );
 };

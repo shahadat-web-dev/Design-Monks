@@ -73,9 +73,8 @@ export default function WhatWeDoAdvanced() {
           {services.map((item, index) => (
             <div
               key={index}
-              className={`mb-10 w-90  transition-opacity duration-500 ${
-                activeIndex === index ? "opacity-100" : "opacity-0"
-              }`}
+              className={`mb-10 w-90  transition-opacity duration-500 ${activeIndex === index ? "opacity-100" : "opacity-0"
+                }`}
             >
               <h2 className="md:text-4xl border-[#34007A] border-b md:pb-8 font-bold mb-2">{item.title}</h2>
               <p className="text-[#CDCDCD] pt-5 mb-3">{item.desc}</p>
@@ -93,16 +92,17 @@ export default function WhatWeDoAdvanced() {
               key={index}
               className="md:h-[50vh] flex items-center justify-center"
             >
-              <div className="flex flex-col md:flex-row items-start gap-8">
+              <div className="hidden lg:flex md:flex items-start gap-8">
                 <img
                   src={item.images[0]}
                   alt=""
-                  className="w-64 md:w-90 md:h-120 rounded-xl shadow-xl -translate-y-6"
+                  className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-80 xl:w-96 h-auto rounded-xl shadow-xl md:-translate-y-6"
                 />
+
                 <img
                   src={item.images[1]}
                   alt=""
-                  className="w-64 md:w-90 md:h-120 hidden md:block rounded-xl shadow-xl translate-y-6"
+                  className="hidden lg:block w-full max-w-md lg:w-80  h-auto rounded-xl shadow-xl md:translate-y-6"
                 />
               </div>
             </div>

@@ -89,9 +89,9 @@ export default function ReviewSection() {
         {/* 1st row: left → right */}
         <div className="flex animate-marquee gap-6">
           {reviews[0].concat(reviews[0]).map((card, i) => (
-            <div key={i} className="flex-1 min-w-[300px]  rounded-xl p-6 border border-gray-300">
-              <p className="text-gray-700 mb-4 text-sm">{card.text}</p>
-              <div className="flex items-center gap-3">
+            <div key={i} className="flex-1 min-w-[400px]  rounded-xl p-6 border border-gray-300">
+              <p className="text-gray-700 mb-4 text-lg">{card.text}</p>
+              <div className="flex items-center pt-10 gap-3">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
                   style={{ backgroundColor: card.color }}
@@ -110,9 +110,9 @@ export default function ReviewSection() {
         {/* 2nd row: right → left */}
         <div className="flex animate-marquee-reverse gap-6">
           {reviews[1].concat(reviews[1]).map((card, i) => (
-            <div key={i} className="flex-1 min-w-[300px]  rounded-xl p-6 border border-gray-300">
-              <p className="text-gray-700 mb-4 text-sm">{card.text}</p>
-              <div className="flex items-center gap-3">
+            <div key={i} className="flex-1 min-w-[400px]  rounded-xl p-6 border border-gray-300">
+              <p className="text-gray-700 mb-4 text-lg">{card.text}</p>
+              <div className="flex items-center pt-10 gap-3">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
                   style={{ backgroundColor: card.color }}
@@ -131,11 +131,11 @@ export default function ReviewSection() {
         {/* 3rd row: left → right */}
         <div className="flex animate-marquee gap-6">
           {reviews[2].concat(reviews[2]).map((card, i) => (
-            <div key={i} className="flex-1 min-w-[300px]  rounded-xl p-6 border border-gray-300">
-              <p className="text-gray-700 mb-4 text-sm">{card.text}</p>
-              <div className="flex items-center gap-3">
+            <div key={i} className="flex-1 min-w-[400px]  rounded-xl p-6 border border-gray-300">
+              <p className="text-gray-700 mb-4 text-lg">{card.text}</p>
+              <div className="flex items-center pt-10 gap-3">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold"
+                  className="w-10 h-10 rounded-full  flex items-center justify-center text-white font-bold"
                   style={{ backgroundColor: card.color }}
                 >
                   {card.initials}
