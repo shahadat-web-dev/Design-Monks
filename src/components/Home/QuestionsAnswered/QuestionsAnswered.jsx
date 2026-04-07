@@ -50,7 +50,7 @@ export default function QuestionsAnswered() {
           <span className="italic playfair">Answered!</span>
         </h2>
 
-        <div className="text-left mt-10 max-w-5xl mx-auto">
+        <div className="text-left mt-20 max-w-5xl mx-auto">
           {faqs.map((faq, i) => (
             <div key={i} className="border-b border-gray-300 py-7">
               <div
@@ -80,25 +80,35 @@ export default function QuestionsAnswered() {
       </section>
 
       {/* Contact */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-5">
-        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#2d4a1e]">
+      <div className="max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8 pb-5">
+        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#2d4a1e] p-8">
           <div className="p-6 sm:p-8 flex-1 text-white">
             <span className="border border-green-400 text-green-400 px-4 py-1 rounded-full text-sm">
               Claim a $799 Consultation, on Us
             </span>
 
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
-              Enhance Your Brand <br /> Potential <span>At No Cost!</span>
+            <h3 className="text-3xl sm:text-4xl red-hat  lg:text-5xl font-bold mt-6 leading-tight">
+              Enhance Your Brand <br /> Potential <span className="italic playfair">At No Cost!</span>
             </h3>
 
-            <ul className="mt-6 space-y-2 text-xs sm:text-sm text-gray-300">
-              <li>✓ Expect a response within 24 hours</li>
-              <li>✓ NDA available on request</li>
-              <li>✓ Dedicated specialists</li>
+            <ul className="mt-6 space-y-2 text-xs sm:text-sm md:text-lg text-[#CECECE]">
+              <li>✓ Expect a response from us within 24 hours.</li>
+              <li>✓ We're happy to sign an NDA upon request.</li>
+              <li>✓ Get access to a team of dedicated product specialists.</li>
             </ul>
 
             <div className="mt-6">
-              <img src="/person.png" alt="person" className="w-32 sm:w-40 rounded-lg" />
+              <img src="/person.png" alt="person" className="w-32 md:w-55 sm:w-40 rounded-lg" />
+            </div>
+            <div>
+              <div className="pt-2">
+                <h2 className="text-2xl red-hat font-bold">Abdullah Al Noma</h2>
+                <p className="text-[#595859]">COO & Co-founder</p>
+              </div>
+              <div className="pt-5">
+                <h3 className="text-[#7F7E7F] text-lg">📞 +880 1788097396</h3>
+                <p className="text-lg font-bold text-[#A87FFF]">Book a Call Directly</p>
+              </div>
             </div>
           </div>
 
@@ -155,19 +165,19 @@ export default function QuestionsAnswered() {
 
         <div className="flex justify-center gap-3 mb-6">
           {socialIcons.map((icon, i) => (
-            <span key={i} className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full text-sm text-gray-500 hover:border-purple-500 hover:text-purple-500 cursor-pointer">
+            <span key={i} className="w-10 h-10 flex items-center justify-center bg-[#E1E1E1] rounded-xl text-lg  hover:border-purple-500 hover:text-purple-500 cursor-pointer">
               {icon}
             </span>
           ))}
         </div>
 
-        <div className="flex max-w-xs mx-auto">
+        <div className="flex gap-2 max-w-120  mx-auto">
           <input
             placeholder="✉ Your email here"
-            className="flex-1 border border-gray-300 rounded-l-md px-4 py-2 text-sm"
+            className="flex-1 border border-gray-300 rounded-lg px-10 py-4 text-sm"
           />
-          <button className="bg-[#6c47ff] text-white px-4 py-2 rounded-r-md text-sm">
-            Subscribe →
+          <button className="bg-[#6c47ff] text-white px-10 rounded-lg py-2 rounded-r-md text-sm">
+            Subscribe
           </button>
         </div>
       </footer>

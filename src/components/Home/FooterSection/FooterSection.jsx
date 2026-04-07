@@ -1,46 +1,152 @@
 export default function FooterSection() {
+  const locations = [
+    { country: "United States", address: "16 Cove Road, Mount Arlington, NJ 07856" },
+    { country: "Australia", address: "155 Bennett Rd, St Clair NSW 2759" },
+    { country: "South Africa", address: "55 Mons Rd, Bellevue East, Johannesburg, 2198" },
+    { country: "Singapore", address: "6 Raffles Blvd, Marina Square" },
+    { country: "Italy", address: "Via Bari, 9, 03043 Cassino, FR" },
+    { country: "Dubai", address: "AlFattan Downtown - 32d St - Al Satwa" },
+    { country: "Cyprus", address: "Estias 5, Strovolos 2001" },
+    { country: "Bangladesh", address: "Ventura Iconia, Plot 37 Road No. 11, Banani, Dhaka 1213" },
+  ];
+
+  const links = [
+    {
+      title: "Important Links",
+      items: ["Contact Us", "About Us", "Products", "Industry", "Blogs"],
+    },
+    {
+      title: "Services",
+      items: ["UI/UX Design", "Web Design", "Logo & Branding", "Webflow Design", "Framer Design"],
+    },
+    {
+      title: "Specialized Industry",
+      items: ["Fintech Industry", "Healthcare & Fitness Industry", "Edtech Industry", "Cybersecurity Industry", "Company Deck"],
+    },
+    {
+      title: "Compare",
+      items: ["Vs Agencies", "Vs Freelancers", "Vs Inhouse"],
+    },
+  ];
+
+  const partners = [
+    { name: "Framer", label: "Professional Partner", color: "text-blue-500" },
+    { name: "Webflow", label: "Professional Partner", color: "text-indigo-500" },
+    { name: "Behance", label: "Top Team On Behance", color: "text-blue-400" },
+    { name: "dribbble", label: "Top Team On Dribbble", color: "text-pink-500" },
+    { name: "Clutch", label: "Reviewed On ★★★★★", color: "text-white" },
+    { name: "Google", label: "Reviewed On ★★★★★", color: "text-white" },
+  ];
+
   return (
-    <footer className="relative w-full h-[550px] md:h-[650px] overflow-hidden">
+    <footer className="w-full bg-black text-white font-sans">
 
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/footer-video.mp4" type="video/mp4" />
-      </video>
+      {/* Globe / Video Background Section */}
+      <div className="relative w-full min-h-[880px] flex items-center justify-center overflow-hidden">
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 z-10 w-full h-full object-cover opacity-80"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/footer-video.mp4" type="video/mp4" />
+        </video>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 md:px-12">
+        {/* Fallback gradient if video fails */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-[#051525] to-[#0a1e2e] opacity-60 z-[1]" />
 
-        {/* Heading */}
-        <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
-          Let’s build something amazing together
-        </h2>
+        {/* Teal glow at bottom */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-48 bg-[radial-gradient(ellipse_80%_100%_at_50%_100%,rgba(0,200,180,0.15),transparent)] z-[2] pointer-events-none" />
 
-        {/* Subheading */}
-        <p className="text-gray-300 max-w-2xl mb-8 text-lg md:text-xl">
-          We help startups and businesses create stunning digital experiences that
-          engage and convert.
-        </p>
+        {/* Location Cards */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-14 flex flex-col items-center gap-4">
 
-        {/* CTA Button */}
-        <button className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg md:text-xl hover:bg-gray-200 transition-all duration-300">
-          Get in Touch
-        </button>
+          {/* Row 1 */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {locations.slice(0, 4).map((loc) => (
+              <div
+                key={loc.country}
+                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-6 py-4 min-w-[210px] text-center hover:bg-white/15 transition-colors duration-200"
+              >
+                <h4 className="text-white font-semibold text-[15px] mb-1">{loc.country}</h4>
+                <p className="text-white/55 text-[12px] leading-relaxed">{loc.address}</p>
+              </div>
+            ))}
+          </div>
 
-        {/* Optional small text */}
-        <p className="text-gray-400 text-sm md:text-base mt-6">
-          © 2026 DesignMonks. All rights reserved.
-        </p>
-
+          {/* Row 2 */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {locations.slice(4).map((loc) => (
+              <div
+                key={loc.country}
+                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-6 py-4 min-w-[210px] text-center hover:bg-white/15 transition-colors duration-200"
+              >
+                <h4 className="text-white font-semibold text-[15px] mb-1">{loc.country}</h4>
+                <p className="text-white/55 text-[12px] leading-relaxed">{loc.address}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Links Section */}
+      <div className="bg-[#0a0a0a] py-14 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+          {links.map((col) => (
+            <div key={col.title}>
+              <h5 className="text-white font-bold text-[14px] mb-5 tracking-wide">{col.title}</h5>
+              <ul className="flex flex-col gap-3">
+                {col.items.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-white/50 text-[14px] hover:text-white transition-colors duration-150"
+                    >
+                      {item}
+                      {item === "Company Deck" && (
+                        <span className="ml-2 inline-block bg-white/10 rounded-full px-2 py-[2px] text-[10px] text-white/50">
+                          P
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Partners / Badges Section */}
+      <div className="bg-[#0a0a0a] border-t border-white/[0.07] py-7 px-6">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8">
+          {partners.map((p) => (
+            <div key={p.name} className="flex flex-col items-center gap-1">
+              <span className={`font-bold text-xl ${p.color}`}>{p.name}</span>
+              <span className="text-white/40 text-[11px] text-center">{p.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-[#0a0a0a] border-t border-white/[0.07] py-5 px-6">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+          <a href="#" className="text-white/40 text-[13px] hover:text-white transition-colors">
+            Terms & Conditions
+          </a>
+          <span className="text-white/40 text-[13px]">
+            © 2026, Design Monks LLC, All Rights Reserved.
+          </span>
+          <a href="#" className="text-white/40 text-[13px] hover:text-white transition-colors">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+
     </footer>
   );
 }
