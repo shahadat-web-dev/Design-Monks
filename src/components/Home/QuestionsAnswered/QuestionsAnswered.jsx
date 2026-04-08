@@ -59,18 +59,16 @@ export default function QuestionsAnswered() {
               >
                 {faq.q}
                 <div
-                  className={`w-7 h-7 flex items-center justify-center border border-[#6c47ff] rounded-full transition-transform ${
-                    openIndex === i ? "rotate-180" : ""
-                  }`}
+                  className={`w-7 h-7 flex items-center justify-center border border-[#6c47ff] rounded-full transition-transform ${openIndex === i ? "rotate-180" : ""
+                    }`}
                 >
                   ▼
                 </div>
               </div>
 
               <div
-                className={`text-sm text-gray-500 overflow-hidden transition-all duration-300 ${
-                  openIndex === i ? "max-h-40 mt-2" : "max-h-0"
-                }`}
+                className={`text-sm text-gray-500 overflow-hidden transition-all duration-300 ${openIndex === i ? "max-h-40 mt-2" : "max-h-0"
+                  }`}
               >
                 {faq.a}
               </div>
@@ -81,7 +79,8 @@ export default function QuestionsAnswered() {
 
       {/* Contact */}
       <div className="max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8 pb-5">
-        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#2d4a1e] p-8">
+        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-tr from-[#1a1a2e] via-[#16213e] to-[#705521] p-8">
+
           <div className="p-6 sm:p-8 flex-1 text-white">
             <span className="border border-green-400 text-green-400 px-4 py-1 rounded-full text-sm">
               Claim a $799 Consultation, on Us
@@ -112,40 +111,81 @@ export default function QuestionsAnswered() {
             </div>
           </div>
 
-          <div className="p-6 sm:p-8 flex-1">
-            <input placeholder="Full Name" className="w-full mb-4 p-3 rounded bg-white/10 text-white text-sm" />
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input placeholder="Email" className="w-full mb-4 p-3 rounded bg-white/10 text-white text-sm" />
-              <input placeholder="Whatsapp" className="w-full mb-4 p-3 rounded bg-white/10 text-white text-sm" />
+
+          <div className="p-6 sm:p-8 flex-1 text-white">
+
+            {/* Full Name */}
+            <div className="mb-6">
+              <label className="block mb-2 font-semibold">Full Name</label>
+              <input
+                placeholder="John Doe"
+                className="w-full h-12 px-4 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-gray-400 outline-none focus:border-white/40"
+              />
             </div>
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              {budgets.map((b) => (
-                <button
-                  key={b}
-                  onClick={() => setSelectedBudget(b)}
-                  className={`px-3 py-1 text-xs sm:text-sm rounded border transition ${
-                    selectedBudget === b
-                      ? "bg-[#6c47ff] text-white border-[#6c47ff]"
-                      : "text-gray-300 border-white/20"
-                  }`}
-                >
-                  {b}
-                </button>
-              ))}
+            {/* Email + Whatsapp */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+
+              <div>
+                <label className="block mb-2 font-semibold">Your Email</label>
+                <input
+                  placeholder="yourmail@gmail.com"
+                  className="w-full h-12 px-4 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-gray-400 outline-none focus:border-white/40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold">Whatsapp Number</label>
+                <input
+                  placeholder="1 123 1234567"
+                  className="w-full h-12 px-4 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-gray-400 outline-none focus:border-white/40"
+                />
+              </div>
+
             </div>
 
-            <textarea placeholder="Project details" className="w-full mb-4 p-3 rounded bg-white/10 text-white text-sm" />
+            {/* Budget */}
+            <div className="mb-6">
+              <label className="block mb-3 font-semibold">Project Budget</label>
 
-            <button className="bg-[#6c47ff] text-white px-6 py-2 rounded text-sm font-semibold">
-              Let's Connect →
+              <div className="flex flex-wrap gap-3">
+                {budgets.map((b) => (
+                  <button
+                    key={b}
+                    onClick={() => setSelectedBudget(b)}
+                    className={`px-4 py-2 rounded-lg border text-sm transition ${selectedBudget === b
+                        ? "bg-white text-black border-white"
+                        : "border-white/20 text-white hover:border-white/40"
+                      }`}
+                  >
+                    {b}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Details */}
+            <div className="mb-6">
+              <label className="block mb-2 font-semibold">Project Details</label>
+              <textarea
+                placeholder="I want to redesign my website.."
+                className="w-full h-32 px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-gray-400 outline-none resize-none focus:border-white/40"
+              />
+            </div>
+
+            {/* Button */}
+            <button className="bg-gradient-to-r cursor-pointer from-[#7b3fe4] to-[#9b5cff] px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition">
+              Let's Connect
+              <span>→</span>
             </button>
+
           </div>
+
         </div>
       </div>
 
-    {/* Marquee */}
+      {/* Marquee */}
       <div className="lg:w-300  md:w-170 mx-auto bg-gradient-to-r from-[#D8FF84] via-[#FFFFFF] to-[#D8FF84] p-5 overflow-hidden rounded-4xl">
         <div className="flex whitespace-nowrap animate-[marquee_20s_linear_infinite]">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -171,12 +211,12 @@ export default function QuestionsAnswered() {
           ))}
         </div>
 
-        <div className="flex gap-2 max-w-120  mx-auto">
+        <div className="flex gap-1 max-w-120 pb-10 pt-5  mx-auto">
           <input
             placeholder="✉ Your email here"
-            className="flex-1 border border-gray-300 rounded-lg px-10 py-4 text-sm"
+            className="flex-1 border border-gray-300 rounded-lg md:px-10 py-4 text-sm"
           />
-          <button className="bg-[#6c47ff] text-white px-10 rounded-lg py-2 rounded-r-md text-sm">
+          <button className="bg-[#6c47ff] text-white md:px-10 rounded-lg py-2 rounded-r-md text-sm">
             Subscribe
           </button>
         </div>

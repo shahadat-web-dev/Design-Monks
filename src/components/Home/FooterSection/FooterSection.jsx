@@ -147,6 +147,10 @@ export default function FooterSection() {
         </div>
       </div>
 
+      <div className="">
+        <img  src="/designmonks.png" alt="" />
+      </div>
+
     </footer>
   );
 }

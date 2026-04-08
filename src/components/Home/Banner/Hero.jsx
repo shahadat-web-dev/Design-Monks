@@ -36,7 +36,7 @@ const Hero = () => {
             </h1>
 
 
-            <h1 className='text-white  border mt-5 md:mx-auto md:w-105 w-90 rounded-full py-2 border-green-700 text-center'>🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈 Designig across 8+ countries 🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈</h1>
+            <h1 className='text-white lg:block md:block hidden border mt-5 md:mx-auto md:w-105 w-90 rounded-full py-2 border-green-700 text-center'>🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈 Designig across 8+ countries 🏳️‍⚧️🏳️‍🌈🏳️‍⚧️🏳️‍🌈</h1>
 
             {/* Button */}
             <div className='flex justify-center pt-10'>
