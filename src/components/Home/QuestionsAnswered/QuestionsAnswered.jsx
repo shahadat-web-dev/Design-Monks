@@ -14,19 +14,20 @@ const socialIcons = ["𝔻", "𝔹", "Ig", "in", "𝕡", "𝕏", "✈"];
 const marqueeText = "Value And Guarantee. Don't Miss Out - Secure Your Brand's Future Today.";
 
 const MarqueeItem = () => (
-  <span className="flex items-center gap-2 px-6 text-xl italic text-[#1a3a00] whitespace-nowrap">
-    <div className="flex -space-x-1">
+  <span className="flex items-center gap-10 px-6 text-xl italic text-[#1a3a00] whitespace-nowrap">
+    <div className="flex  -space-x-1">
       {["/av1.png", "/av2.png", "/av3.png", "/av4.png"].map((src, i) => (
         <img
           key={i}
           src={src}
           alt="avatar"
-          className="w-5 h-5 rounded-full border-2 border-[#a8f55c] object-cover"
+          className="w-10 h-10 p-1 bg-[#F8CD7A] rounded-full border-2 border-[#a8f55c] object-cover"
         />
       ))}
     </div>
-    <span>40+</span>
+    <div className="pl-15">
     {marqueeText}
+    </div>
     <span className="w-1 h-1 bg-[#1a3a00] rounded-full opacity-50" />
   </span>
 );
@@ -79,7 +80,7 @@ export default function QuestionsAnswered() {
 
       {/* Contact */}
       <div className="max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8 pb-5">
-        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-tr from-[#1a1a2e] via-[#16213e] to-[#705521] p-8">
+        <div className="flex flex-col lg:flex-row rounded-2xl overflow-hidden bg-gradient-to-tr from-[#0A0A0A] via-[#16213e] to-[#705521] p-8">
 
           <div className="p-6 sm:p-8 flex-1 text-white">
             <span className="border border-green-400 text-green-400 px-4 py-1 rounded-full text-sm">
@@ -105,7 +106,7 @@ export default function QuestionsAnswered() {
                 <p className="text-[#595859]">COO & Co-founder</p>
               </div>
               <div className="pt-5">
-                <h3 className="text-[#7F7E7F] text-lg">📞 +880 1788097396</h3>
+                <h3 className="text-[#7F7E7F] text-lg">📞 +880 178809.....</h3>
                 <p className="text-lg font-bold text-[#A87FFF]">Book a Call Directly</p>
               </div>
             </div>
@@ -186,7 +187,7 @@ export default function QuestionsAnswered() {
       </div>
 
       {/* Marquee */}
-      <div className="lg:w-300  md:w-170 mx-auto bg-gradient-to-r from-[#D8FF84] via-[#FFFFFF] to-[#D8FF84] p-5 overflow-hidden rounded-4xl">
+      <div className="lg:w-305  md:w-170 mx-auto border-1 border-[#E5E5E5] bg-gradient-to-r from-[#D8FF84] via-[#FFFFFF] to-[#D8FF84] p-5 overflow-hidden rounded-full">
         <div className="flex whitespace-nowrap animate-[marquee_20s_linear_infinite]">
           {Array.from({ length: 6 }).map((_, i) => (
             <MarqueeItem key={i} />

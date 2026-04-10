@@ -1,13 +1,13 @@
 export default function FooterSection() {
   const locations = [
-    { country: "United States", address: "16 Cove Road, Mount Arlington, NJ 07856" },
-    { country: "Australia", address: "155 Bennett Rd, St Clair NSW 2759" },
-    { country: "South Africa", address: "55 Mons Rd, Bellevue East, Johannesburg, 2198" },
-    { country: "Singapore", address: "6 Raffles Blvd, Marina Square" },
-    { country: "Italy", address: "Via Bari, 9, 03043 Cassino, FR" },
-    { country: "Dubai", address: "AlFattan Downtown - 32d St - Al Satwa" },
-    { country: "Cyprus", address: "Estias 5, Strovolos 2001" },
-    { country: "Bangladesh", address: "Ventura Iconia, Plot 37 Road No. 11, Banani, Dhaka 1213" },
+    { country: "United States", address: "16 Cove Road, Mount Arlington" },
+    { country: "Australia", address: "155 Bennett Rd, St Clair " },
+    { country: "South Africa", address: "55 Mons Rd, Bellevue East," },
+    { country: "Singapore", address: "Raffles Blvd, Marina Square" },
+    { country: "Italy", address: "Via Bari, 9, 03043 Cassino," },
+    { country: "Dubai", address: "AlFattan Downtown - 32d ." },
+    { country: "Cyprus", address: "Estias 5, Strovolos 2001 .." },
+    { country: "Bangladesh", address: "Ventura Iconia, Plot 37 Road" },
   ];
 
   const links = [
@@ -71,7 +71,7 @@ export default function FooterSection() {
                 key={loc.country}
                 className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-6 py-4 min-w-[210px] text-center hover:bg-white/15 transition-colors duration-200"
               >
-                <h4 className="text-white font-semibold text-[15px] mb-1">{loc.country}</h4>
+                <h4 className="text-white font-semibold text-[20px] red-hat mb-1">{loc.country}</h4>
                 <p className="text-white/55 text-[12px] leading-relaxed">{loc.address}</p>
               </div>
             ))}
